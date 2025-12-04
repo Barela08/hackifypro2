@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackifyPro – Cyber Security & Ethical Hacking</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+        body { background: #020d18; color: white; }
+
+        header { background: #061826; padding: 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
+
+        header img { height: 60px; }
+
+        nav a { margin: 0 15px; text-decoration: none; color: #00ff9c; font-weight: bold; }
+
+        nav a:hover { color: #0affd9; }
+
+        .hero {
+            height: 85vh;
+            background: url('https://wallpapercave.com/wp/wp5052046.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            backdrop-filter: brightness(40%);
+        }
+
+        .hero h1 { font-size: 3.5rem; text-shadow: 0 0 15px #00ffc3; }
+
+        .hero p { margin-top: 10px; font-size: 1.3rem; max-width: 600px; }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: linear-gradient(90deg, #00ff9c, #00b7ff);
+            border: none;
+            color: black;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover { transform: scale(1.07); }
+
+        .section { padding: 60px 10%; }
+
+        h2 { font-size: 2.3rem; color: #00ff9c; margin-bottom: 20px; }
+
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+
+        .card {
+            background: #071e2f;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #00ff9c;
+            transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-7px); box-shadow: 0 0 20px #00ff9c; }
+
+        .footer { background: #061826; padding: 25px; text-align: center; margin-top: 50px; border-top: 1px solid #00ff9c; }
+
+        .footer p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://i.ibb.co/Mdxn2bk/hackifypro-logo.jpg" alt="HackifyPro Logo" />
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#courses" onclick="comingSoon()">Courses</a>
+        <a href="#tools" onclick="comingSoon()">Tools</a>
+        <a href="#contact">Contact</a>
+        </a>
+    </nav>
+</header>
+
+<section class="hero" id="home" style="background: url('https://i.ibb.co/kVKdYmqb/markus-spiske-iar-af-B0-QQw-unsplash.jpg') center/cover no-repeat;">
+    <h1>Welcome to HackifyPro</h1>
+    <p>Your Gateway to Ethical Hacking, Cyber Security, Tools, Tutorials & Real-World Knowledge.</p>
+    <button class="btn" onclick="comingSoon()">Start Learning</button>
+</section>
+
+<section class="section" id="courses">
+    <h2>Our Courses</h2>
+    <div class="features">
+        <div class="card"><h3>Ethical Hacking Basics</h3><p>Start your journey into cyber security.</p></div>
+        <div class="card"><h3>Advanced Penetration Testing</h3><p>Learn how professionals test security systems.</p></div>
+        <div class="card"><h3>Bug Bounty Training</h3><p>Earn by reporting vulnerabilities legally.</p></div>
+    </div>
+</section>
+
+<section class="section" id="tools">
+    <h2>Hacking Tools</h2>
+    <div class="features">
+        <div class="card"><h3>IP Scanner</h3><p>Scan and identify connected devices.</p></div>
+        <div class="card"><h3>Password Analyzer</h3><p>Check password strength & security.</p></div>
+        <div class="card"><h3>Network Monitor</h3><p>Track network packets in real time.</p></div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h2>About Founder</h2>
+    <p style="font-size: 1.2rem;">HackifyPro was founded by <strong>Nilesh Barela</strong>, a Cyber Security enthusiast, AI/ML student, and developer dedicated to creating tools and awareness for ethical hacking.</p>
+    <br>
+
+    <h2>Social Links</h2>
+
+    <a href="https://instagram.com/hackifypro_official" target="_blank" style="display:flex;align-items:center;margin-bottom:10px;color:#00ff9c;text-decoration:none;">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" style="height:30px;margin-right:10px;"> Instagram (@hackifypro_official)
+    </a>
+
+    <a href="https://t.me/hackifypro" target="_blank" style="display:flex;align-items:center;margin-bottom:10px;color:#00ff9c;text-decoration:none;">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" style="height:30px;margin-right:10px;"> Telegram (@hackifypro)
+    </a>
+
+    <br>
+
+    <h2>Contact Support</h2>
+    <form onsubmit="sendMail(event)" style="max-width:400px;">
+        <input type="text" id="name" placeholder="Your Name" required style="width:100%;padding:10px;margin:8px 0;border-radius:5px;border:none;">
+        <input type="email" id="email" placeholder="Your Email" required style="width:100%;padding:10px;margin:8px 0;border-radius:5px;border:none;">
+        <textarea id="message" placeholder="Your Message" required style="width:100%;padding:10px;height:100px;margin:8px 0;border-radius:5px;border:none;"></textarea>
+        <button class="btn" type="submit">Send Message</button>
+    </form>
+</section>
+
+<div class="footer">
+    <p>© 2025 HackifyPro. All Rights Reserved.</p>
+    <p>Developed & Founded by <strong>Nilesh Barela</strong></p>
+</div>
+
+<script>
+    console.log("HackifyPro Loaded Successfully");
+</script>
+
+<script>
+function comingSoon(){
+    alert('⚠️ Coming Soon – This feature is under development!');
+}
+</script>
+<script>
+function comingSoon(){
+    alert('⚠️ Coming Soon – This feature is under development!');
+}
+
+function sendMail(event){
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const mailtoLink = `mailto:hackifypro@gmail.com?subject=Support Request from ${name}&body=Email: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+
+    window.location.href = mailtoLink;
+
+    alert('Message sent successfully! Your mail app will open now.');
+}
+</script>
+</body>
+</html>
